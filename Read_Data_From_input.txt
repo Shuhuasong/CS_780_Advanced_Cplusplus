@@ -1,0 +1,81 @@
+Solution #1: read line by line
+(Note: place the input.txt file under the same directory with main.cpp file
+
+vector<int> splitString(const string& str, char delim)
+{
+    vector<int> tokens;
+    if (str == "") return tokens;
+    string currentToken;
+    stringstream ss(str);
+    int x = 0;
+    while (getline(ss, currentToken, delim))
+    {
+        x = stoi(currentToken);
+        tokens.push_back(x);
+    }
+
+    return tokens;
+}
+
+
+int  main(int argc, const char *argv[]){
+    string line;
+    int i = 0;
+    vector<string> polys;
+    vector <int> func1;
+    vector <int> func2;
+    ifstream fin;
+    fin.open("input.txt");
+    int lineNum = 1;
+    if(fin.is_open()){
+        while(getline(fin, line)){
+           if(lineNum==1){
+               func1 = splitString(line, ' ');
+           }else{
+               func2 = splitString(line, ' ');
+           }
+           lineNum++;
+        }
+    }
+    for(int a : func1) cout << a << " " ;
+    cout << endl;
+    for(int b : func2) cout << b << " ";
+    return 0;
+}
+
+
+
+Solution #2: if the input are all integer, and the total number rows and cols
+(Note: place the input.txt file in the directory of "make-build-debug" folder
+Configuration:
+Program argument: input.txt 8 output_1.txt output_2.txt output_3.txt
+
+
+int main(int argc, const char *argv[]) {
+
+    ifstream inFile(argv[1]);
+    int connectness = stoi(argv[2]); // 
+    ofstream output_1(argv[3]);
+    ofstream output_2(argv[4]);
+    ofstream output_3(argv[5]);
+
+
+    int numRows, numCols, minVal, maxVal;
+    inFile >> numRows;
+    inFile >> numCols;
+    inFile >> minVal;
+    inFile >> maxVal;
+
+      inArray = new int*[numRows];
+        for(int i=0; i<numRows+2; i++){
+            inArray[i] = new int[numCols];
+        }
+    
+     for(int i=1; i<numRows+1; i++){
+             for(int j=1; j<numCols+1; j++){
+                  inFile >> inArray[i][j];
+             }
+     }
+
+)
+

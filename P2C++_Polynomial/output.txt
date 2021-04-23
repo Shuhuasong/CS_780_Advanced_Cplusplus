@@ -1,0 +1,9 @@
+1. 
+First Polynomial : 2x^3+6x^2+4x
+Second Polynomial :  2x^3-3x^2+3x
+2. Add Two Polynomial: 
+4x^3+3x^2+7x
+3. Minus Two Polynomial: 
+9x^2+x
+4. Multiply Two Polynomial: 
+4x^6+6x^5-4x^4+6x^3+12x^2
